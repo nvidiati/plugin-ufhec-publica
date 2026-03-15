@@ -1,4 +1,4 @@
-# 🔌 Form-to-Table Entry Manager (UFHEC Publica)
+# 🔌 Manejador de entradas Form-to-Table (UFHEC Publica)
 
 ![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -56,4 +56,4 @@ Un plugin robusto para WordPress diseñado para gestionar envíos de usuarios ex
 
 ## ✒️ Autor
 
-- [cite_start]**Kris Bell** - _Especialista en WordPress & Web Developer_ - [nvidiati](https://github.com/nvidiati) [cite: 1, 29]
+- **Kris Bell** - _Especialista en WordPress & Web Developer_ - [nvidiati](https://github.com/nvidiati) [cite: 1, 29]

@@ -1,0 +1,582 @@
+/* UFHEC Publicaciones - Frontend Styles */
+
+/* Form Button */
+#ufhec-open-btn {
+    background-color: #7c0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+#ufhec-open-btn:hover {
+    background-color: #5c0000;
+}
+
+#ufhec-open-btn .dashicons {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+/* Override any container restrictions */
+#ufhec-form-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+/* Modal Styles - Override everything */
+body .ufhec-modal {
+    display: none;
+    position: fixed !important;
+    z-index: 999999 !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: auto !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    animation: fadeIn 0.3s;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+}
+
+body .ufhec-modal.show {
+    display: block !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body .ufhec-modal-content {
+    background-color: #fefefe !important;
+    margin: 3% auto !important;
+    padding: 30px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    width: 90% !important;
+    max-width: 700px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    animation: slideDown 0.3s;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    position: relative !important;
+    z-index: 1000000 !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.ufhec-close {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ufhec-close:hover,
+.ufhec-close:focus {
+    color: #7c0000;
+}
+
+.ufhec-modal-content h2 {
+    margin-top: 0;
+    color: #7c0000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+#ufhec-form p {
+    margin-bottom: 15px;
+}
+
+#ufhec-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+#ufhec-form input[type="text"],
+#ufhec-form input[type="url"],
+#ufhec-form input[type="number"],
+#ufhec-form textarea,
+#ufhec-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+#ufhec-form input:focus,
+#ufhec-form textarea:focus,
+#ufhec-form select:focus {
+    outline: none;
+    border-color: #7c0000;
+    box-shadow: 0 0 0 3px rgba(124, 0, 0, 0.1);
+}
+
+#ufhec-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#ufhec-form input[type="file"] {
+    padding: 8px 0;
+}
+
+#ufhec-form small {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #666;
+}
+
+.ufhec-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Form Actions */
+.ufhec-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.ufhec-btn-submit,
+.ufhec-btn-cancel {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ufhec-btn-submit {
+    background-color: #7c0000;
+    color: white;
+    flex: 1;
+}
+
+.ufhec-btn-submit:hover {
+    background-color: #5c0000;
+}
+
+.ufhec-btn-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.ufhec-btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.ufhec-btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+/* Messages */
+#ufhec-msg {
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: none;
+}
+
+#ufhec-msg.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#ufhec-msg.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Table Wrapper */
+.ufhec-table-wrap {
+    margin: 30px 0;
+}
+
+/* Table Controls */
+.ufhec-controls {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#ufhec-search {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#ufhec-search:focus {
+    outline: none;
+    border-color: #7c0000;
+    box-shadow: 0 0 0 3px rgba(124, 0, 0, 0.1);
+}
+
+#ufhec-filter-ano,
+#ufhec-filter-cuartil {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+}
+
+#ufhec-reset {
+    padding: 10px 16px;
+    background: #7c0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+#ufhec-reset:hover {
+    background: #5c0000;
+}
+
+/* Table Container */
+.ufhec-table-container {
+    overflow-x: auto;
+    border: 1px solid #e0e0e0;
+}
+
+/* Table Styles */
+.ufhec-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+.ufhec-table thead {
+    background-color: #7c0000;
+    color: white;
+}
+
+.ufhec-table thead th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ufhec-table thead th:last-child {
+    border-right: none;
+}
+
+.ufhec-table thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 25px;
+}
+
+.ufhec-table thead th.sortable:hover {
+    background-color: #5c0000;
+}
+
+.ufhec-table thead th .arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+.ufhec-table thead th .arrow::after {
+    content: '⇅';
+    font-size: 14px;
+}
+
+.ufhec-table thead th.sort-asc .arrow::after {
+    content: '↑';
+    opacity: 1;
+}
+
+.ufhec-table thead th.sort-desc .arrow::after {
+    content: '↓';
+    opacity: 1;
+}
+
+.ufhec-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+.ufhec-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.ufhec-table tbody tr.hidden {
+    display: none;
+}
+
+.ufhec-table tbody td {
+    padding: 12px;
+    vertical-align: top;
+}
+
+.ufhec-table tbody td:first-child {
+    font-weight: 500;
+}
+
+/* Links */
+.ufhec-table a {
+    color: #7c0000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.ufhec-table a:hover {
+    color: #5c0000;
+    text-decoration: underline;
+}
+
+/* Badges */
+.ufhec-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-q1 {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.badge-q2 {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.badge-q3 {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.badge-q4 {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Table Footer */
+.ufhec-footer {
+    padding: 15px 20px;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.ufhec-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .ufhec-modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 20px;
+    }
+
+    .ufhec-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ufhec-controls {
+        padding: 15px;
+    }
+
+    .ufhec-table {
+        font-size: 13px;
+    }
+
+    .ufhec-table thead {
+        display: none;
+    }
+
+    .ufhec-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+    }
+
+    .ufhec-table tbody td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .ufhec-table tbody td:last-child {
+        border-bottom: none;
+    }
+
+    .ufhec-table tbody td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 600;
+        color: #7c0000;
+    }
+}
+
+/* Loading State */
+.ufhec-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.ufhec-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #7c0000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pagination Styles */
+.ufhec-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+}
+
+.ufhec-page-numbers {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.ufhec-page-btn,
+.ufhec-page-num {
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.ufhec-page-btn:hover,
+.ufhec-page-num:hover {
+    background: #7c0000;
+    color: white;
+    border-color: #7c0000;
+}
+
+.ufhec-page-num.active {
+    background: #7c0000;
+    color: white;
+    border-color: #7c0000;
+    cursor: default;
+}
+
+.ufhec-dots {
+    padding: 0 5px;
+    color: #999;
+}
+
+.ufhec-prev,
+.ufhec-next {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .ufhec-pagination {
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 15px;
+    }
+    
+    .ufhec-page-btn,
+    .ufhec-page-num {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}

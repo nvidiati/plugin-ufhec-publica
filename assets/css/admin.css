@@ -1,0 +1,37 @@
+/* UFHEC Publicaciones - Admin Styles */
+
+/* Custom columns styling */
+.ufhec-q {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Meta box styling */
+.form-table th {
+    width: 200px;
+}
+
+.form-table label {
+    font-weight: 600;
+}
+
+/* Export page styling */
+.wrap .card h2 {
+    margin-top: 0;
+}
+
+.wrap .card table.widefat {
+    margin-top: 15px;
+}
+
+.wrap .card table.widefat td {
+    padding: 10px;
+}
+
+.wrap .card table.widefat tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
